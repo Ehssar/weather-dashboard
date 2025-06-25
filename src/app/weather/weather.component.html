@@ -12,9 +12,18 @@
 </div>
 
 <div *ngIf="data" class="result">
-  <h2>{{ data.city }}</h2>
+  <h2>{{ data.city }} - Today</h2>
   <img [src]="data.iconUrl" alt="weather icon"/>
   <p>{{ data.description | titlecase }}</p>
   <p>🌡️ {{ data.temp }} °C</p>
   <p>💧 {{ data.humidity }} %</p>
+</div>
+
+<div *ngIf="dailyForecasts.length" class="daily-forecast">
+    <div *ngFor="let day of dailyForecasts" class="daily-card">
+    <h3>{{ day.date | date:'EEE, MMM d' }}</h3>
+    <img [src]="day.iconUrl" alt="{{ day.description }}" />
+    <p>{{ day.description | titlecase }}</p>
+    <p>High: {{ day.high }}°C  •  Low: {{ day.low }}°C</p>
+    </div>
 </div>
