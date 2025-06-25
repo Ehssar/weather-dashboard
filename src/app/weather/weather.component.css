@@ -1,0 +1,21 @@
+.search {
+  margin: 2rem;
+  display: flex;
+}
+.search input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.search button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.result {
+  margin: 2rem;
+  text-align: center;
+}
+.error {
+  margin: 2rem;
+  color: red;
+}
